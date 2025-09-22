@@ -28,3 +28,13 @@ console.log(process.env.API_KEY) // "your-super-secret-api-key"
 console.log(process.env.REDIS_URL) // "redis://127.0.0.1:16379"
 ```
 
+Also without env injection:
+```js
+import loadEnvDir from '@deyvan/envdir'
+
+const env = loadEnvDir("/run/secrets") // loads ./env/ by default
+
+console.log(env.DATABASE_URL) // "postgres://..."
+console.log(env.API_KEY) // "your-super-secret-api-key"
+console.log(env.REDIS_URL) // "redis://127.0.0.1:16379"
+```

@@ -1,10 +1,12 @@
 const fs = require("fs")
 
-exports.parse = (path = "./env") => {
+module.exports = function(path = "./env", settings = {dontInjectEnv: false}){
     const dir = fs.readdirSync(path, {
         recursive: false,
         encoding: "utf-8"
     })
+
+    const env = {}
 
     for(const file of dir){
 
@@ -20,6 +22,14 @@ exports.parse = (path = "./env") => {
             throw Error(`env filename "${file}" contains illegal characters`)
         }
 
-        process.env[file] = fs.readFileSync(`${path}/${file}`)
+        const val = fs.readFileSync(`${path}/${file}`, {encoding: "utf-8"})
+
+        if(!settings.dontInjectEnv){
+            process.env[file] = val
+        }
+
+        env[file] = val
     }
+
+    return env
 }

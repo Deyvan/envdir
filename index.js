@@ -1,1 +1,2 @@
-module.exports = require("./lib/parse.js").parse
+import parse from "./index.cjs"
+export default parse
