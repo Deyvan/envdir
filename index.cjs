@@ -24,7 +24,7 @@ module.exports = function(path = "./env", settings = {dontInjectEnv: false}){
 
         const val = fs.readFileSync(`${path}/${file}`, {encoding: "utf-8"})
 
-        if(!settings.dontInjectEnv){
+        if(!settings?.dontInjectEnv){
             process.env[file] = val
         }
 
