@@ -1,5 +1,5 @@
 {
-  "name": "envdir",
+  "name": "@deyvan/envdir",
   "version": "1.0.0",
   "description": "Loads environment variables from files in a specified directory. Each file becomes a variable where its name is the key and its content is the value.",
   "main": "index.js",
@@ -11,9 +11,6 @@
     },
     "./package.json": "./package.json"
   },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "keywords": [
     "env",
     "environment",
@@ -24,5 +21,9 @@
     "docker"
   ],
   "author": "Deyvan",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Deyvan/envdir.git"
+  }
 }
