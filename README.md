@@ -32,7 +32,7 @@ Also without env injection:
 ```js
 import loadEnvDir from '@deyvan/envdir'
 
-const env = loadEnvDir("/run/secrets") // loads ./env/ by default
+const env = loadEnvDir("/run/secrets", {dontInjectEnv: true}) // loads ./env/ by default
 
 console.log(env.DATABASE_URL) // "postgres://..."
 console.log(env.API_KEY) // "your-super-secret-api-key"
