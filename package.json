@@ -1,6 +1,6 @@
 {
   "name": "@deyvan/envdir",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Loads environment variables from files in a specified directory. Each file becomes a variable where its name is the key and its content is the value.",
   "main": "index.js",
   "module": "index.esm.js",
