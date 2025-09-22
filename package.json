@@ -4,6 +4,7 @@
   "description": "Loads environment variables from files in a specified directory. Each file becomes a variable where its name is the key and its content is the value.",
   "main": "index.js",
   "module": "index.esm.js",
+  "types": "./index.d.ts",
   "exports": {
     ".": {
       "require": "./index.js",
